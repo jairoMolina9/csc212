@@ -51,7 +51,8 @@ public double getRadius() {
 }
 
 public double circumference() {
-  return 2*Math.PI*radius;
+  return
+  
 }
 
 public double area() {
