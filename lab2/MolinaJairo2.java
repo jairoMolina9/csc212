@@ -23,12 +23,21 @@ public class MolinaJairo2{
       System.out.println("Enter radius for circle 2:");
       Circle second = new Circle(scan.nextDouble());
 
+      /*
+      Did many print statements to show that
+      printing objects print the toString() function
+      */
       if(first.equals(second)) {
-        System.out.println("Both circles are equal \nArea: " + first.area() + "\nCircumference: " + first.circumference());
+        System.out.println("Both circles are equal");
+        System.out.println(first);
+        System.out.println("Area: " + first.area() + "\nCircumference: " + first.circumference());
       } else {
-        System.out.println("The circles are not equal \nCircle 1:\nArea:" + first.area() + "\nCircumference: " + first.circumference() + "\nCircle 2:\nArea: "+ second.area() + "\nCircumference: " + second.circumference());
+        System.out.println("The circles are not equal");
+        System.out.println(first);
+        System.out.println("Area:" + first.area() + "\nCircumference: " + first.circumference();
+        System.out.println(second);
+        System.out.println("Area: "+ second.area() + "\nCircumference: " + second.circumference());
       }
-
     }
 }
 
@@ -39,20 +48,19 @@ Circle(){
   radius = 1;
 }
 
-Circle(double r){
-  radius = r;
+Circle(double radius){
+  this.radius = radius;
 }
 
-public void setRadius(double r) {
-    radius = r;
+public void setRadius(double radius) {
+    this.radius = radius;
   }
 public double getRadius() {
   return radius;
 }
 
 public double circumference() {
-  return
-  
+  return 2 * Math.PI * radius;
 }
 
 public double area() {

@@ -1,7 +1,7 @@
 /*
 Write a function called shorten that is defined in the class P8 and shortens each element of
 an array of strings. Every string with more than two characters is cut down to its first two
-characters.
+caharacters.
 */
 
 public class prob1 {
