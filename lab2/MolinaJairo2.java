@@ -24,17 +24,17 @@ public class MolinaJairo2{
       Circle second = new Circle(scan.nextDouble());
 
       /*
-      Did many print statements to show that
-      printing objects print the toString() function
+      Multiple print statements to show that
+      printing objects redirect the toString() function
       */
       if(first.equals(second)) {
         System.out.println("Both circles are equal");
-        System.out.println(first);
+        System.out.println(first); //doesn't matter first or second
         System.out.println("Area: " + first.area() + "\nCircumference: " + first.circumference());
       } else {
         System.out.println("The circles are not equal");
         System.out.println(first);
-        System.out.println("Area:" + first.area() + "\nCircumference: " + first.circumference();
+        System.out.println("Area:" + first.area() + "\nCircumference: " + first.circumference());
         System.out.println(second);
         System.out.println("Area: "+ second.area() + "\nCircumference: " + second.circumference());
       }
@@ -42,37 +42,37 @@ public class MolinaJairo2{
 }
 
 class Circle {
-private double radius;
+  private double radius;
 
-Circle(){
-  radius = 1;
-}
+  Circle(){
+    radius = 1;
+  }
 
-Circle(double radius){
-  this.radius = radius;
-}
-
-public void setRadius(double radius) {
+  Circle(double radius){
     this.radius = radius;
   }
-public double getRadius() {
-  return radius;
-}
 
-public double circumference() {
-  return 2 * Math.PI * radius;
-}
+  public void setRadius(double radius) {
+    this.radius = radius;
+  }
 
-public double area() {
-  return Math.PI * Math.pow(radius,2);
-}
+  public double getRadius() {
+    return radius;
+  }
 
-public String toString() {
-  return "Circle "+ Double.toString(radius);
-}
+  public double circumference() {
+    return 2 * Math.PI * radius;
+  }
 
-public boolean equals(Circle c) {
-  return (c.getRadius() == radius) ? true : false;
-}
+  public double area() {
+    return Math.PI * Math.pow(radius,2);
+  }
 
+  public String toString() {
+    return "Circle "+ Double.toString(radius);
+  }
+
+  public boolean equals(Circle c) {
+    return (c.getRadius() == radius) ? true : false;
+  }
 }
