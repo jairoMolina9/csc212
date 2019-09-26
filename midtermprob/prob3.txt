@@ -1,0 +1,39 @@
+public class P2 {
+  public static int F(int x[], int c) {
+    if (c < 3)
+    return 0;
+
+    return x[c - 1] + F(x, c - 1);
+  }
+
+  public static int G(int a, int b) {
+    b = b - a;
+    a = b + a;
+
+    return a;
+  }
+
+  public static void main(String args[]) {
+    int a = 4, b = 1;
+    int x[] = { 3, 1, 4, 1, 5 };
+
+    String s = "Problem Number 2";
+
+    System.out.println(x[2 + 2] + x[2]); // line (a)
+    System.out.println(s.substring(2, 3)); // line (b)
+    System.out.println(s.substring(s.indexOf("b"))); // line (c)
+    System.out.println("" + G(b, a) + a + b); // line (d)
+    System.out.println(F(x, 5)); // line (e)
+  }
+}
+
+(a) What is the output at line (a)?
+Answer: 9
+(b) What is the output at line (b)?
+Answer: Prlem Number 2
+(c) What is the output at line (c)?
+Answer: Prolem Number 2
+(d) What is the output at line (d)?
+Answer: 9
+(e) What is the output at line (e)?
+Answer: 10

@@ -1,0 +1,26 @@
+Write the best title lines for the functions that are called by the following main program. Do
+not supply the blocks for the functions.
+
+public class P1 {
+  public static void main(String args[]) {
+  int x = 2, y = 3, z[] = new int[4];
+  boolean a = true, b = false, c[] = new boolean[4];
+  String s = "Hello", t = "goodbye", u[][] = new String[4][5];
+  for (int i = 0; i < 4; i++) c[i] = data(x, y, 2.5); // (a)
+  setToFive(z, c);
+  System.out.println(z[1]); // (b) prints 5
+  System.out.println(speedLimit(x, z[1])); // (c) prints 55
+  System.out.println(numberStrings(4, u, 5)); // (d) prints 20
+  f(numberStrings(0, u, 0), data(y, x, f(20, a || b))); // (e)
+  }
+}
+(a)Title line for data as called at the line marked (a).
+    public static Boolean data(int x, int y, double z){}
+(b)Title line for setToFive as called at the line marked (b).
+    public static void setToFive(int z[], Boolean c[]){}
+(c)Title line for speedLimit as called at the line marked (c).
+    public static int speedLimit(int x, int z) {}
+(d) Title line for numberStrings as called at the line marked (d)
+    public static String (int x, String s, int y) {}
+(e) Title line for f as called at the line marked (e).
+    public static int (String s, Boolean d) {}
