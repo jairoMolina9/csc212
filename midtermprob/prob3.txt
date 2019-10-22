@@ -30,10 +30,10 @@ public class P2 {
 (a) What is the output at line (a)?
 Answer: 9
 (b) What is the output at line (b)?
-Answer: Prlem Number 2
+Answer: o
 (c) What is the output at line (c)?
-Answer: Prolem Number 2
+Answer: blem Number 2
 (d) What is the output at line (d)?
-Answer: 9
+Answer: 441
 (e) What is the output at line (e)?
 Answer: 10

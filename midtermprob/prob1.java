@@ -5,17 +5,19 @@ caharacters.
 */
 
 public class prob1 {
-public static void main (String [] args) {
-  String x[] = {"CSCI", "1", "11", "Queens", "College", "CUNY"};
-  shorten(x);
-  for(int i = 0; i < 6; i++)
-  System.out.print(x[i] + " ");
-  }
-public static void shorten(String x[]){
-  for(int i = 0; i < 6; i++){
-    if(x[i].length() > 2) {
-  x[i] = x[i].substring(0,2);
-}
-}
-}
-}
+  public static void main (String [] args) {
+    String x[] = {"CSCI", "1", "11", "Queens", "College", "CUNY"};
+
+    shorten(x);
+
+    for(int i = 0; i < 6; i++)
+      System.out.print(x[i] + " ");
+    }
+
+    public static void shorten(String x[]) {
+      for(int i = 0; i < 6; i++){
+        if(x[i].length() > 2)
+          x[i] = x[i].substring(0,2);
+        }
+      }
+    }
