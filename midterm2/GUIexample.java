@@ -16,31 +16,6 @@ public class GUIexample extends JFrame {
     Container c = getContentPane();
     c.setLayout(new BorderLayout());
 
-    setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-
-    addWindowListener(new WindowAdapter(){
-      int attempt = 0;
-      JLabel alert = new JLabel();
-      @Override
-      public void windowClosing(WindowEvent e) {
-          alert.setForeground(Color.RED);
-         c.add(alert, BorderLayout.NORTH);
-         switch(++attempt){
-           case 1:
-            alert.setText("Are you sure!");
-            break;
-          case 2:
-            alert.setText("Are you really sure!");
-            break;
-          case 3:
-            System.exit(0);
-          default:
-            break;
-         }
-      }
-    });
-
-
     JMenuBar mb = new JMenuBar();
     JMenu menu1 = new JMenu("Languages");
     JMenuItem item1 = new JMenuItem("English to Spanish");
