@@ -37,7 +37,7 @@ public class prob4{
     for(int i = 0; i < d.length; i++) {
       System.out.println("Enter radius for: " + (i+1));
       d[i] = new Circle(); //must do this
-      d[i].setRadius(new Scanner(nextDouble()));
+      d[i].setRadius(sc.nextDouble());
     }
   }
 }
