@@ -44,3 +44,16 @@ class Rectangle {
     return flag;
   }
 }
+
+/*
+part b
+
+class Orange extends Fruit implements Edible {
+
+@Override
+public void howToEat() {
+  System.out.println("1.take off peel \n 2.Eat it")
+  }
+}
+
+*/
