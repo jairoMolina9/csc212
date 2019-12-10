@@ -1,3 +1,15 @@
+/*
+Jairo Molina
+23499086
+CSC 212-12A
+Fall 2019
+
+Assignment 6: Generic Stack
+Program that uses the Stack class to solve the problem of detecting whether a String
+has balanced parentheses, brackets and braces.
+
+*/
+
 import java.util.Scanner;
 
 public class MolinaJairo6 {
@@ -8,11 +20,10 @@ public class MolinaJairo6 {
 
     System.out.println("Enter any expression with {}, () or []");
 
-    boolean ok = parenthesesBalanced(sc.nextLine());
-    if(ok)
-    System.out.println("works");
-
-
+    if( parenthesesBalanced(sc.nextLine()) )
+      System.out.println("Balanced");
+    else
+      System.out.println("Not Balanced");
 
   }
 
@@ -20,46 +31,50 @@ public class MolinaJairo6 {
 
     boolean balanced = false; //default value
 
-    input = input.replaceAll("\\s","");
+    input = input.replaceAll("\\s",""); //gets rid off white spaces
 
     Stack<Character> stck = new Stack<Character>();
 
-    String symbols = "(){}[]";
+       for(int i=0;i<input.length();i++)
+       {
 
-    for(int j = 0; j < symbols.length()-1; j++) {
+          if (input.charAt(i) == '{' || input.charAt(i) == '(' || input.charAt(i) == '[')
+            stck.push(input.charAt(i));
 
-      for(int i = 0; i < input.length(); i++) {
+          if (input.charAt(i) == '}' || input.charAt(i) == ')' || input.charAt(i) == ']')
+          {
 
-        if(input.charAt(i) == symbols.charAt(j) )
-          stck.push(input.charAt(i));
+             if (stck.size() == 0) //if there is no opening bracket
+               {
+                   return false;
+               }
 
-        if(input.charAt(i) == symbols.charAt(j+1)) {
+               try {
 
-          try {
+               char tmp = stck.pop();
 
-            stck.pop();
+               if( (tmp == '(' && input.charAt(i) == ')') || (tmp == '[' && input.charAt(i) == ']') || (tmp == '{' && input.charAt(i) == '}') )
+                  balanced = true;
+               else
+                 return false;
 
-          } catch (Exception e) {
+               } catch ( Exception e) {
 
-              return balanced;
+                 System.out.println("Error: " + e.getMessage());
 
+                 return false;
+
+               }
           }
 
-        }
+       }
 
-      }
+       if(stck.size() == 0) { //double checks list is empty, not necessary but to make sure
 
-    }
+         balanced = true;
 
-    System.out.println("here");
-    if(stck.size() == 0) {
+       }
 
-      balanced = true;
-
-    }
-
-
-                  System.out.println(stck);
     return balanced; //no need to check for size > 0 since default balanced value is false
 
   }
